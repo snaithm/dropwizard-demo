@@ -7,6 +7,7 @@ import com.yammer.dropwizard.Service;
 import com.yammer.dropwizard.config.Bootstrap;
 import com.yammer.dropwizard.config.Environment;
 import com.yammer.dropwizard.resources.HelloWorldResource;
+import com.yammer.dropwizard.resources.TalkToMeResource;
 
 public class SampleService extends Service<SampleConfiguration> {
 
@@ -19,5 +20,6 @@ public class SampleService extends Service<SampleConfiguration> {
 
     public void run(SampleConfiguration sampleConfiguration, Environment environment) throws Exception {
         environment.addResource(new HelloWorldResource());
+        environment.addResource(new TalkToMeResource());
     }
 }
